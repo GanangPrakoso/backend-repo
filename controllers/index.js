@@ -15,11 +15,12 @@ const controller = {
 
   createUser: async (req, res) => {
     try {
-      const { totalAverageWeightRatings, numberOfRents } = req.body;
+      const { totalAverageWeightRatings, numberOfRents, recentlyActive } =
+        req.body;
       const newUser = {
         totalAverageWeightRatings: +totalAverageWeightRatings,
         numberOfRents: +numberOfRents,
-        recentlyActive: Math.floor(Date.now() / 1000),
+        recentlyActive: +recentlyActive,
       };
 
       const docRef = await addDoc(usersCollection, newUser);
