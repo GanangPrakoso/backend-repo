@@ -31,7 +31,7 @@ Make sure you have the following installed:
    - Add the following environment variables:
      ```env
      NODE_ENV=development
-     PORT=3000
+     PORT=3001
      ```
 
 ## Running the Server
